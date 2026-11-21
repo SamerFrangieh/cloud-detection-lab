@@ -9,3 +9,9 @@ variable "name" {
   type        = string
   default     = "cdl"
 }
+
+variable "enable_guardduty" {
+  description = "Turn GuardDuty on (starts the 30-day free trial)"
+  type        = bool
+  default     = false
+}
