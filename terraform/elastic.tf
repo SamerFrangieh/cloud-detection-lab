@@ -22,7 +22,8 @@ resource "aws_sqs_queue_policy" "cloudtrail" {
 
 # Tell the logs bucket to notify the queue when a CloudTrail file arrives
 resource "aws_s3_bucket_notification" "logs" {
-  bucket = aws_s3_bucket.logs.id
+  bucket      = aws_s3_bucket.logs.id
+  eventbridge = true
   queue {
     queue_arn     = aws_sqs_queue.cloudtrail.arn
     events        = ["s3:ObjectCreated:*"]

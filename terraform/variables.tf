@@ -15,3 +15,10 @@ variable "enable_guardduty" {
   type        = bool
   default     = false
 }
+
+variable "slack_webhook_url" {
+  description = "Slack incoming webhook (leave empty to skip Slack)"
+  type        = string
+  default     = ""
+  sensitive   = true
+}
