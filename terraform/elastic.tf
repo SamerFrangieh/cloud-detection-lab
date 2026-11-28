@@ -36,7 +36,6 @@ resource "aws_s3_bucket_notification" "logs" {
 # Elastic's own user: can read the logs and the queue, nothing else
 resource "aws_iam_user" "elastic_reader" {
   name          = "${var.name}-elastic-reader"
-  force_destroy = true
 }
 
 resource "aws_iam_user_policy" "elastic_reader" {
