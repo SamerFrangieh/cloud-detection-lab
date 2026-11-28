@@ -60,7 +60,7 @@ I used [Stratus Red Team](https://github.com/DataDog/stratus-red-team) to run 8 
  
 All 8 got caught. My notes on each attack, what gave it away, and the rule tuning are in [docs/attacks.md](docs/attacks.md). The rules are exported in [detections/](detections/).
  
-![Elastic alerts grouped by rule](docs/images/elastic-alerts.png)
+![Elastic alerts grouped by rule](docs\Screenshot 2026-11-28 111824.png)
  
 *These totals cover all my test runs, including alerts from before I added grouping and suppression to the noisier rules.*
  
