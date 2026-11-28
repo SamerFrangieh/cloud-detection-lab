@@ -68,7 +68,7 @@ All 8 got caught. My notes on each attack, what gave it away, and the rule tunin
  
 To test it I ran the backdoor-key attack again and waited. The key was created at 19:07:38 UTC and the Lambda had disabled it by 19:09:24, a bit under 2 minutes later, without me touching anything. It disables the key instead of deleting it so there's still evidence to look at.
  
-![Slack alert from the Lambda](docs/images/slack-alert.png)
+![Slack alert from the Lambda](docs/slack-webhook.png)
  
 It's slower than it could be. Normally you'd trigger on the IAM event directly through EventBridge in us-east-1 and react in seconds, but my account couldn't use that region (more on that below), so it waits for the CloudTrail log file instead.
  
